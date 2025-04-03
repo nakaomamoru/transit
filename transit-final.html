@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>～TRANSIT GROUP～ | 可能性は無限大！ワクワクのその先へ！</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      background-color: #fff;
+      color: #333;
+    }
+    header.hero {
+      background: url('https://www.transit-inc.co.jp/wp-content/uploads/2022/03/header-company.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    header.hero h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    header.hero p {
+      font-size: 1.2rem;
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #0d2c40;
+    }
+    .values, .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .value-item, .service-item {
+      flex: 1 1 250px;
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .value-item img, .service-item img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+    .value-item h3, .service-item h3 {
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+    }
+    .value-item p, .service-item p {
+      font-size: 0.95rem;
+    }
+    footer {
+      background-color: #0d2c40;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+    footer p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+    .cta {
+      text-align: center;
+      margin: 60px auto;
+    }
+    .cta a {
+      display: inline-block;
+      background-color: #007BFF;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 9999px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    label {
+      font-weight: bold;
+    }
+    .button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 9999px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 20px;
+    }
+    #thanks-message {
+      display: none;
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    @media (max-width: 600px) {
+      header.hero {
+        padding: 50px 15px;
+      }
+      .values, .services {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>～TRANSIT GROUP～</h1>
+    <p>可能性は無限大！ワクワクのその先へ！</p>
+  </header>
+
+  <section>
+    <h2>私たちが大切にしている7つの価値観</h2>
+    <div class="values">
+      <!-- ... 7つの価値観（省略） ... -->
+    </div>
+  </section>
+
+  <section>
+    <h2>サービス紹介</h2>
+    <div class="services">
+      <!-- ... サービス3つ（省略） ... -->
+    </div>
+  </section>
+
+  <section>
+    <h2>お問い合わせ</h2>
+    <form onsubmit="showThanks(event)">
+      <label for="name">お名前</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">メールアドレス</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">お問い合わせ内容</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="button">送信する</button>
+    </form>
+    <p id="thanks-message">送信が完了しました。担当者よりご連絡いたします。</p>
+  </section>
+
+  <section>
+    <h2>アクセスマップ</h2>
+    <iframe src="https://www.google.com/maps?q=福岡県久留米市上津町2518-4&output=embed"></iframe>
+  </section>
+
+  <div class="cta">
+    <a href="#">お問い合わせはこちら</a>
+  </div>
+
+  <footer>
+    <p>合同会社トランジット</p>
+    <p>〒830-0052 福岡県久留米市上津町2518-4</p>
+    <p>© TRANSIT GROUP</p>
+  </footer>
+
+  <script>
+    function showThanks(event) {
+      event.preventDefault();
+      document.querySelector('form').style.display = 'none';
+      document.getElementById('thanks-message').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
